@@ -7,13 +7,13 @@ public class MyClass {
 	
 	private int tag;
 	public MyClass(int tag) {
-		System.out.println("SecondClass"+tag+":被创建");					
+		System.out.println("MyClass"+tag+":被创建");					
 		this.tag = tag;
 		test2.description();										
 	}
 	
 	public void description() {
-		System.out.println("SecondClass"+ tag +": description\n");
+		System.out.println("MyClass"+ tag +": description\n");
 	}
 
 	static TestClass test3 = new TestClass(3);				
