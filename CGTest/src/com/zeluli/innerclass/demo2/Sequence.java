@@ -1,4 +1,4 @@
-package com.zeluli.innerclass;
+package com.zeluli.innerclass.demo2;
 
 public class Sequence {
 	private Object[] items;
