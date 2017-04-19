@@ -1,10 +1,10 @@
 package com.zeluli.innerclass.callbacks;
 
-public class Callee2 extends MyIncrement {
+public class Callee2{
 	private int i = 0;
 	
 	public void increment() {
-		super.increment();
+		System.out.print("Other:");
 		i++;
 		System.out.println(i);
 	}
