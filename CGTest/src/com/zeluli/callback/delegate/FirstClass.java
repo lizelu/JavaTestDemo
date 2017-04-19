@@ -5,11 +5,11 @@ public class FirstClass implements CustomDelegate {
 	
 	public void beginRunSecondDelegateMethod() {
 		if(this.secondClass == null) {
-			this.secondClass = new SecondClass();
+			this.secondClass = new SecondClass(this);
 		}
-		this.secondClass.setDelegate(this);
 	}
 
+	//secondClass回调要执行的方法
 	@Override
 	public void setValue(String value) {
 		System.out.println("第二个类回调过来的值：" + value);

@@ -8,15 +8,8 @@ import java.util.TimerTask;
 public class SecondClass {
 	private CustomDelegate delegate;
 
-	public CustomDelegate getDelegate() {
-		return delegate;
-	}
-
-	public void setDelegate(CustomDelegate delegate) {
+	public SecondClass(CustomDelegate delegate) {
 		this.delegate = delegate;
-	}
-	
-	public SecondClass() {
 		this.begin();
 	}
 	
@@ -31,19 +24,14 @@ public class SecondClass {
 		
         long delay = 0;  
         Timer timer = new Timer();  
-        timer.scheduleAtFixedRate(task, delay, getIntevalPeriod()); 
+        timer.scheduleAtFixedRate(task, delay, 1000); 
 	}
-	
-	protected long getIntevalPeriod() {
-		return 1000;
-	}
-	
 	
 	private String getNowDate() {
-		   Date currentTime = new Date();
-		   SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-		   String dateString = formatter.format(currentTime);
-		   return dateString;
-		}
+	   Date currentTime = new Date();
+	   SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	   String dateString = formatter.format(currentTime);
+	   return dateString;
+	}
 	
 }
