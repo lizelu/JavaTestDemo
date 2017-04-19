@@ -1,4 +1,4 @@
-package com.zeluli.delegate;
+package com.zeluli.callback.delegate;
 
 public class FirstClass implements CustomDelegate {
 	private SecondClass secondClass;
