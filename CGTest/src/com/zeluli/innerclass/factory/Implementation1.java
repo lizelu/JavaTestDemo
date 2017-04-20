@@ -2,7 +2,7 @@ package com.zeluli.innerclass.factory;
 
 public class Implementation1 implements Service {
 	
-	//匿名内部类
+	//匿名内部工厂类
 	public static ServiceFactory factory = new ServiceFactory() {
 		@Override
 		public Service getService() {
@@ -19,5 +19,4 @@ public class Implementation1 implements Service {
 	public void method2() {
 		System.out.println("Implementation1.method2()");
 	}
-
 }
