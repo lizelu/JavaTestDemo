@@ -1,7 +1,10 @@
 package com.zeluli.annotation.test;
 
+import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.lang.reflect.Parameter;
+import java.util.Iterator;
 
 public class AnnotationTracker {
 	//获取类型注解
@@ -18,6 +21,13 @@ public class AnnotationTracker {
 			MethodAnnotation methodAnnotation = method.getAnnotation(MethodAnnotation.class);	//取出被UseCase注解的方法
 			if (methodAnnotation != null) {
 				System.out.println("描述信息:" + methodAnnotation.description());
+			}
+			
+			for (Parameter parameter : method.getParameters()) {
+				ParameterAnnotation parameterAnnotation = parameter.getAnnotation(ParameterAnnotation.class);
+				if (parameterAnnotation != null) {
+					System.out.println("参数的注解信息:" + parameterAnnotation.value());
+				}
 			}
 		}
 	}

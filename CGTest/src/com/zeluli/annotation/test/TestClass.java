@@ -6,5 +6,7 @@ public class TestClass {
 	public String value;
 	
 	@MethodAnnotation(description = "我是TestClass.method1的描述信息")
-	public void method1() {}
+	public void method1(@ParameterAnnotation(value = "parameter info") String parameter) {
+		
+	}
 }
