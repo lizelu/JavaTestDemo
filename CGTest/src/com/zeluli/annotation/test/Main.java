@@ -6,7 +6,10 @@ public class Main {
 		System.out.println("================Type Annotation==============");
 		AnnotationTracker.trackTypeAnnotation(TestClass.class);
 		
-		System.out.println("\n================Method Annotation==============");
+		System.out.println("\n================Constructor Annotation==============");
+		AnnotationTracker.trackConstructorAnnotation(TestClass.class);
+		
+		System.out.println("\n================Method & Parameter Annotation==============");
 		AnnotationTracker.trackMethodAnnotation(TestClass.class);
 		
 		System.out.println("\n================Field Annotation==============");

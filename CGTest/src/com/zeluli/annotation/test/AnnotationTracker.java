@@ -1,5 +1,6 @@
 package com.zeluli.annotation.test;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
@@ -10,6 +11,16 @@ public class AnnotationTracker {
 		CETypeAnnotation ceTypeAnnotation = cl.getAnnotation(CETypeAnnotation.class);
 		if (ceTypeAnnotation != null) {
 			System.out.println("class id:" + ceTypeAnnotation.id());
+		}
+	}
+	
+	//获取构造器注解
+	public static void trackConstructorAnnotation(Class<?> cl) {
+		for (Constructor<?> constructor : cl.getConstructors()) {		//遍历有注解的方法
+			CEConstructorAnnotation constructorAnnotation = constructor.getAnnotation(CEConstructorAnnotation.class);
+			if (constructorAnnotation != null) {
+				System.out.println("描述信息:" + constructorAnnotation.value());
+			}
 		}
 	}
 	
